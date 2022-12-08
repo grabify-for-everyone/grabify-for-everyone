@@ -4,5 +4,5 @@ const generate = function() {
   var xhr = new XMLHttpRequest();
   
   xhr.open("POST", "https://grabify-webserver.tympanicblock612.repl.co/generate", true)
-  xhr.send(url)
+  xhr.send(JSON.stringify({"url":url}))
 }
