@@ -1,6 +1,8 @@
 const generate = function() {
   
   var url = document.getElementById("url").value
-  console.log(url)
-  window.test = url
+  var xhr = new XMLHttpRequest();
+  
+  xhr.open("POST", "webserver", true)
+  xhr.send(url)
 }
