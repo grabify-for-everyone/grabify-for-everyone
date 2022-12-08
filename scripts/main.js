@@ -3,6 +3,6 @@ const generate = function() {
   var url = document.getElementById("url").value
   var xhr = new XMLHttpRequest();
   
-  xhr.open("POST", "webserver", true)
+  xhr.open("POST", "https://grabify-webserver.tympanicblock612.repl.co/generate", true)
   xhr.send(url)
 }
