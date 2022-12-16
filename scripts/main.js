@@ -17,6 +17,12 @@ const generate = function() {
   };
   const body = JSON.stringify({"url":url})
   xhr.send(body)
+  
+  var label = document.getElementById("reLinkLabel")
+  label.style.visibility = "visible"
+  var p = document.getElementById("reLink")
+  p.style.visibility = "visible"
+  p.innerText = window.resp["url"]
 }
 const view = function() {
   var sessionId = document.getElementById("view").value
@@ -36,6 +42,19 @@ const view = function() {
   };
   xhr.send()
   
+  var pLabel = document.getElementById("pLabel")
+  pLabel.style.visibility = "visible"
   var p = document.getElementById("paragraph")
+  p.style.visibility = "visible"
   p.innerText = window.view
+}
+window.onload = function() {
+  var label = document.getElementById("reLinkLabel")
+  label.style.visibility = "hidden"
+  var p = document.getElementById("reLink")
+  p.style.visibility = "hidden"
+  var p = document.getElementById("paragraph")
+  p.style.visibility = "hidden"
+  var pLabel = document.getElementById("pLabel")
+  pLabel.style.visibility = "hidden"
 }
