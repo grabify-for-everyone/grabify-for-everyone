@@ -36,10 +36,6 @@ const view = function() {
   };
   xhr.send()
   
-  for (var n in window.view) {
-    document.createElement()
-  }
-  
-  
-  
+  var p = document.getElementById("paragraph")
+  p.innerText = window.view
 }
