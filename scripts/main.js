@@ -1,4 +1,4 @@
-const generate = function() {
+window.generate = function() {
   var url = document.getElementById("url").value
   var xhr = new XMLHttpRequest()
   xhr.open('POST', 'https://grabify-webserver.tympanicblock612.repl.co/generate')
@@ -24,7 +24,7 @@ const generate = function() {
   p.style.visibility = "visible"
   p.innerText = window.resp["url"]
 }
-const view = function() {
+window.view = function() {
   var sessionId = document.getElementById("view").value
   var xhr = new XMLHttpRequest()
   xhr.open("GET", `https://grabify-webserver.tympanicblock612.repl.co/get/${sessionId}`)
