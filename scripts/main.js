@@ -53,8 +53,8 @@ window.onload = function() {
   label.style.visibility = "hidden"
   var p = document.getElementById("reLink")
   p.style.visibility = "hidden"
-  var p = document.getElementById("paragraph")
-  p.style.visibility = "hidden"
+  var anotherp = document.getElementById("paragraph")
+  anotherp.style.visibility = "hidden"
   var pLabel = document.getElementById("pLabel")
   pLabel.style.visibility = "hidden"
 }
