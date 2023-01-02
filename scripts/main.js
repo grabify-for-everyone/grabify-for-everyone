@@ -36,7 +36,7 @@ window.view = function() {
       pLabel.style.visibility = "visible"
       var p = document.getElementById("paragraph")
       p.style.visibility = "visible"
-      p.innerText = xhr.response
+      p.innerText = JSON.stringify(xhr.response)
     } else {
       console.error(xhr.response)
     }
@@ -51,6 +51,10 @@ window.onload = function() {
   var label = document.getElementById("reLinkLabel")
   label.style.visibility = "hidden"
   var p = document.getElementById("reLink")
+  p.style.visibility = "hidden"
+  var label = document.getElementById("viewLabel")
+  label.style.visibility = "hidden"
+  var p = document.getElementById("view")
   p.style.visibility = "hidden"
   var anotherp = document.getElementById("paragraph")
   anotherp.style.visibility = "hidden"
