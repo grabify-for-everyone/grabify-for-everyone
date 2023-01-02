@@ -13,6 +13,11 @@ window.generate = function() {
       var p = document.getElementById("reLink")
       p.style.visibility = "visible"
       p.innerText = xhr.response['test']
+      label = document.getElementById("codeLabel")
+      label.style.visibility = "visible"
+      p = document.getElementById("code")
+      p.style.visibility = "visible"
+      p.innerText = xhr.response['view']
     } else {
       console.error(xhr.response)
     }
