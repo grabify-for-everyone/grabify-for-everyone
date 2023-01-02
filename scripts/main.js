@@ -7,7 +7,12 @@ window.generate = function() {
   xhr.onload = () => {
     if (xhr.status === 200) {
       console.log(xhr.response)
-      window.resp = xhr.response
+      //window.resp = xhr.response
+      var label = document.getElementById("reLinkLabel")
+      label.style.visibility = "visible"
+      var p = document.getElementById("reLink")
+      p.style.visibility = "visible"
+      p.innerText = xhr.response['test']
     } else {
       console.error(xhr.response)
     }
@@ -17,12 +22,6 @@ window.generate = function() {
   };
   const body = JSON.stringify({"url":url})
   xhr.send(body)
-  
-  var label = document.getElementById("reLinkLabel")
-  label.style.visibility = "visible"
-  var p = document.getElementById("reLink")
-  p.style.visibility = "visible"
-  p.innerText = window.resp["url"]
 }
 window.view = function() {
   var sessionId = document.getElementById("view").value
@@ -32,7 +31,12 @@ window.view = function() {
   xhr.onload = () => {
     if (xhr.status === 200) {
       console.log(xhr.response)
-      window.view = xhr.response
+      //window.view = xhr.response
+      var pLabel = document.getElementById("pLabel")
+      pLabel.style.visibility = "visible"
+      var p = document.getElementById("paragraph")
+      p.style.visibility = "visible"
+      p.innerText = xhr.response
     } else {
       console.error(xhr.response)
     }
@@ -42,11 +46,6 @@ window.view = function() {
   };
   xhr.send()
   
-  var pLabel = document.getElementById("pLabel")
-  pLabel.style.visibility = "visible"
-  var p = document.getElementById("paragraph")
-  p.style.visibility = "visible"
-  p.innerText = window.view
 }
 window.onload = function() {
   var label = document.getElementById("reLinkLabel")
